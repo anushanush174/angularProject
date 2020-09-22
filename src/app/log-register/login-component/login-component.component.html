@@ -1,0 +1,21 @@
+<p>login-component works!</p>
+
+<form>
+    <div class="input">
+        <label>Username</label>
+        <input type="text" [(ngModel)]="userName" name="name" >
+    </div>
+    <div class="input">
+        <label>Password</label>
+        <input type="password" [(ngModel)]="password" name="password" >
+    </div>
+    <div class="input">
+        <input type="button" value="LogIn" (click)="loginUser()">
+    </div>
+    <div class="input">
+        <input type="button" value="Registration page">
+    </div>
+    <div>
+        <button routerLink="/">Registration</button>
+    </div>
+</form>
