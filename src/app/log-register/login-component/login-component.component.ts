@@ -11,7 +11,7 @@ export class LoginComponentComponent{
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
   loginUser(){
