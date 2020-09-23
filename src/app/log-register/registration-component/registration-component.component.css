@@ -1,0 +1,10 @@
+input{
+    display: flex;
+    margin: 5px;
+}
+
+.regForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}

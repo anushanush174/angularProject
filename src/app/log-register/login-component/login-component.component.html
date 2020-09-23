@@ -2,20 +2,17 @@
 
 <form>
     <div class="input">
-        <label>Username</label>
-        <input type="text" [(ngModel)]="userName" name="name" >
+        <label>Email</label>
+        <input type="text"  >
     </div>
     <div class="input">
         <label>Password</label>
-        <input type="password" [(ngModel)]="password" name="password" >
+        <input type="password" >
     </div>
     <div class="input">
         <input type="button" value="LogIn" (click)="loginUser()">
     </div>
-    <div class="input">
-        <input type="button" value="Registration page">
-    </div>
     <div>
-        <button routerLink="/">Registration</button>
+        <button routerLink="../registration-component">Registration</button>
     </div>
 </form>
