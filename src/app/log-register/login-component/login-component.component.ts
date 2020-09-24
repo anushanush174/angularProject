@@ -6,18 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-component.component.css']
 })
 export class LoginComponentComponent{
-  userName:string;
-  password:string;
-
+  currentUser = JSON.parse(localStorage.getItem("registeredUsers"))
+  email: string;
+  password: string;
   constructor() { }
 
   ngOnInit(): void { 
   }
 
   loginUser(){
-    if(this.userName == "admin" && this.password == "admin"){
-      console.log("welcome admmn")
+
+   
+    if(this.currentUser.find(x => x.email === this.email && x.password === this.password)) {
+      alert('ok')
     }
+
   }
 
 }

@@ -3,8 +3,13 @@ input{
     margin: 5px;
 }
 
-.regForm{
+.regDiv{
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    border-style: double;
+
+    width: 406px;
+    max-width: 406px;
+    margin: 0 auto;
 }

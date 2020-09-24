@@ -1,18 +1,13 @@
-<p>login-component works!</p>
-
+<div class="logDiv">
 <form>
-    <div class="input">
-        <label>Email</label>
-        <input type="text"  >
-    </div>
-    <div class="input">
-        <label>Password</label>
-        <input type="password" >
-    </div>
-    <div class="input">
-        <input type="button" value="LogIn" (click)="loginUser()">
-    </div>
-    <div>
-        <button routerLink="../registration-component">Registration</button>
-    </div>
+        <label><small>Email</small></label>
+        <input type="text" [(ngModel)]="email" name = "email"><br>
+
+        <label><small>Password</small></label>
+        <input type="password" [(ngModel)]="password" name = "password"><br>
+
+        <input type="button" value="LogIn" (click)="loginUser()" class="btn btn-warning">
+
+        <button routerLink="../registration-component" class="btn btn-default" >To Registration Page</button>
 </form>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration-component',
@@ -13,12 +13,14 @@ export class RegistrationComponentComponent implements OnInit {
   currentUser: any = {};
 
   constructor(private formBuilder: FormBuilder) { 
+
     this.fullNameControl = this.formBuilder.group({
-      name: new FormControl(),
-      surname: new FormControl(),
-      mail: new FormControl(),
+      name: new FormControl('', Validators.required),
+      surname: new FormControl('', Validators.required),
+      mail: new FormControl('', [ Validators.required, Validators.email ]),
       password: new FormControl(),
       repeatPassword: new FormControl(),
+      
     })
   };
 
@@ -26,8 +28,11 @@ export class RegistrationComponentComponent implements OnInit {
   }
 
   onSubmit(){
+    // for(i=0; i<)
+    if(this.currentUser)
     this.currentUser = Object.assign(this.currentUser, this.fullNameControl.value);
     this.registeredUsersArray.push(this.currentUser);
     localStorage.setItem("registeredUsers", JSON.stringify(this.registeredUsersArray))
+
   }
 }
