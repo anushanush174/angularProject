@@ -29,8 +29,9 @@ export class RegistrationComponentComponent implements OnInit {
 
   onSubmit(){
     // for(i=0; i<)
+  //this.fullNameControl.value['name']
     if(this.currentUser)
-    this.currentUser = Object.assign(this.currentUser, this.fullNameControl.value);
+      this.currentUser = Object.assign(this.currentUser, this.fullNameControl.value);
     this.registeredUsersArray.push(this.currentUser);
     localStorage.setItem("registeredUsers", JSON.stringify(this.registeredUsersArray))
 

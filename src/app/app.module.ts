@@ -8,7 +8,9 @@ import { LoginComponentComponent } from './log-register/login-component/login-co
 import { RegistrationComponentComponent } from './log-register/registration-component/registration-component.component';
 
 import {ReactiveFormsModule} from '@angular/forms'
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { Post2Component } from './post2/post2.component';
+import { Post3Component } from './post3/post3.component'
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import {FormsModule} from '@angular/forms'
     HelloWorldListComponent,
     LoginComponentComponent,
     RegistrationComponentComponent,
+    Post2Component,
+    Post3Component,
   ],
   imports: [
     BrowserModule,
