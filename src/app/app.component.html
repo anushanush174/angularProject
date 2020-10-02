@@ -1,13 +1,13 @@
-<!-- <h2>hello-world-list works!</h2>
-<hello-world-list></hello-world-list> -->
-<!-- <app-login-component></app-login-component> -->
-<!-- <app-registration-component></app-registration-component> -->
-<!-- <router-outlet></router-outlet> -->
+<div class="container">
+    <h1>Angular Components</h1>
 
-<h1> Hello Angular World!</h1>
+    <app-post-form></app-post-form>
 
-<input type="text" [(ngModel)]="title" >
-<p>{{title}}</p>
+    <hr />
+    
+    <app-post 
+        *ngFor="let p of posts"
+        [post]="p"
+    ></app-post>
 
-
-<hello-world-list></hello-world-list> 
+</div>
