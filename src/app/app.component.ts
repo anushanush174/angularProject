@@ -24,4 +24,10 @@ export class AppComponent {
       id: 2,
     }
   ]
+
+  
+  updatePosts(post: Post){
+    this.posts.unshift(post)
+  }
+
 }
