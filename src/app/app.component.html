@@ -1,6 +1,12 @@
-<!-- <h2>hello-world-list works!</h2>
-<hello-world-list></hello-world-list> -->
-<!-- <app-login-component></app-login-component> -->
-<!-- <app-registration-component></app-registration-component> -->
+<div class="container">
+    <h1>Angular Directives</h1>
 
-<router-outlet></router-outlet>
+
+    <p appStyle="red" [dStyles] = "{border: '1px solid blue', borderRadius: '5px'}">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, quis?
+    </p>
+
+    <p [appStyle]="'blue'" [dStyles] = "{border: '1px solid red', borderRadius: '15px'}">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, quis?
+    </p>
+</div>
