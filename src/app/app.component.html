@@ -1,3 +1,60 @@
-<div class="container">
-    <h1> Angular </h1>
+<div class="container"><br>
+    <form class="card" [formGroup]="form" (ngSubmit)="submit()">
+        <h1>Angular Forms</h1>
+
+        <div class="">
+            <label>Email</label>
+            <input type="text" placeholder="Email" formControlName="email">
+            <div class="validation"></div>
+        </div><br>
+
+        <div class="">
+            <label>Password</label>
+            <input type="password" placeholder="Password" formControlName="password">
+            <!-- <div *ngIf="form.get('password').invalid && form.get('password').touched"
+                class="validation"
+             >
+                <small *ngIf="form.get('password').errors.required">
+                    password cant be empty
+                </small>
+
+                <small>
+                    length must be not short {{form.get('password').errors.minlength.requiredLength}}
+                    now amount of symbolls is {{form.get('password').errors.minlength.actualeLength}}
+                </small>
+            </div> -->
+        </div>
+
+        <div class="card"><br>
+            <h2>Adress</h2>
+
+            <div class="">
+                <h2>Country</h2>
+
+                <select>
+                    <option value="ru">Russian</option>
+                    <option value="ua">Ukrain</option>
+                    <option value="by">Belarus</option>
+                </select>
+            </div>
+
+            <div class="">
+                <input type="text">
+            </div>
+            
+            <button class="btn" type="button">Select city</button>
+        </div>
+
+        <div class="card">
+            <h2>your skills</h2>
+            <button class="btn" type="button">add skill</button>
+            <div class="">
+                <label></label>
+                <input type="text">
+            </div>
+        </div>
+
+        <button class="btn" type="submit" [disabled]="form.invalid">Send</button>
+
+    </form>
 </div>
