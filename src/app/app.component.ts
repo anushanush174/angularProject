@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import{delay} from 'rxjs/operators'
 import { Todo, TodosService } from './todos.service';
 
 @Component({
@@ -14,6 +12,8 @@ export class AppComponent implements OnInit {
   loading = false
 
   todoTitle = "";
+  error = '';
+  
 
   constructor(private todosService: TodosService) { }
 
@@ -43,6 +43,8 @@ export class AppComponent implements OnInit {
       .subscribe(todos => {
         this.todos = todos;
         this.loading = false;
+      }, error => {
+        this.error= error.message
       })
   }
 
@@ -53,6 +55,8 @@ export class AppComponent implements OnInit {
       })
   }
   completeTodo(id: number){
-
+    this.todosService.completeTodo(id).subscribe(todo =>{
+      this.todos.find(t => t.id === todo.id).completed = true
+    })
   }
 }
