@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import {ReactiveFormsModule} from '@angular/forms'
 import {FormsModule} from '@angular/forms';
 import { ModalComponent } from './modal/modal.component'
+import { RefDirective } from './modal/ref.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalComponent,
+    RefDirective
   ],
   imports: [
     BrowserModule,
@@ -19,6 +21,7 @@ import { ModalComponent } from './modal/modal.component'
     
   ],
   providers: [],
+  entryComponents: [ModalComponent],
   exports: [],
   bootstrap: [AppComponent]
 })

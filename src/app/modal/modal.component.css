@@ -7,11 +7,11 @@
     background: rgba(0, 0, 0, .3);
 }
 
-.modal{
+.modal1{
     padding: 1rem;
     background: #fff;
     margin-top: 3rem;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 100% );
 }
